@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sapta-Inspired Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">SAPTA</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1 class="animate fade-in">Welcome to My World</h1>
+    <p class="animate fade-in delay-1">A creative portfolio & digital space</p>
+  </header>
+
+  <section id="about" class="about animate fade-in delay-2">
+    <h2>About Me</h2>
+    <p>I am a designer, developer, and creator. This space showcases my journey through design, technology, and storytelling.</p>
+  </section>
+
+  <section class="projects animate fade-in delay-3">
+    <h2>My Work</h2>
+    <div class="project-card">Project 1</div>
+    <div class="project-card">Project 2</div>
+    <div class="project-card">Project 3</div>
+  </section>
+
+  <footer id="contact" class="footer animate fade-in delay-4">
+    <p>Let's connect: <a href="#">Instagram</a> | <a href="#">LinkedIn</a> | <a href="#">Email</a></p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
